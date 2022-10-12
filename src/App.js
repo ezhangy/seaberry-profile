@@ -4,17 +4,25 @@ import { useRef } from 'react'
 import './App.css'
 import ContentWrapper from "./Components/ContentWrapper"
 import BackgroundImage from "./Components/BackgroundImage"
+import TitleCard from "./Components/TitleCard"
 import useWindowDimensions from "./Hooks/DimensionHook"
 
 
 const App = () => {
-  // const [mainImage, setMainImage] = useState(mainImageArr[0])
   const { height, width } = useWindowDimensions();
-  const [imageCounter, setImageCounter] = useState(0)
+  const [imageCounter, setImageCounter] = useState()
   const [scrollTop, setScrollTop] = useState(0)
-  const mainImageArr = [require("./images/studioTest1.jpeg"), require("./images/studioTest2.jpeg"), require("./images/studioTest1.jpeg")]
-
-  const testQuote = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus id interdum velit laoreet id donec. Vivamus at augue eget arcu dictum varius duis at. Id aliquet lectus proin nibh. Sit amet mauris commodo quis. Est sit amet facilisis magna etiam tempor orci eu lobortis. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Pretium viverra suspendisse potenti nullam ac. A lacus vestibulum sed arcu."
+  const mainImageArr = [
+      require("./images/studio_med.jpg"),
+      require("./images/studio_med.jpg"),
+      require("./images/studio_med.jpg"),
+      require("./images/books.jpg"), 
+      require("./images/painting_drafts.jpg"), 
+      require("./images/painting_drafts.jpg"),
+      require("./images/two_paintings_wall.jpg"),
+      require("./images/disco_ball.jpg"),
+      require("./images/disco_ball.jpg")
+    ]
   
   useEffect(() => {
     const handleScroll = (e) => {
@@ -22,16 +30,23 @@ const App = () => {
     }
     window.addEventListener("scroll", handleScroll)
 
-    const index = Math.floor(scrollTop / height)
+    const offset = height * 0
+    const index = Math.floor((scrollTop + offset) / height)
     setImageCounter(index)
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [scrollTop])
 
+
+  useEffect(() => {
+    console.log("image changed!")
+  }, [imageCounter])
+
   return (
     <>
+      {/* <TitleCard title={title}/> */}
       <ContentWrapper/>
-      <BackgroundImage imageUrl={mainImageArr[imageCounter]}/>
+      <BackgroundImage parentIndex={imageCounter} images={mainImageArr}/>
     </>
   )
 }
