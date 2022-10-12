@@ -1,10 +1,19 @@
 {
   "files": {
-    "main.js": "/seaberry-profile/static/js/main.15b7c785.js",
+    "main.css": "/seaberry-profile/static/css/main.e99b8629.css",
+    "main.js": "/seaberry-profile/static/js/main.7bc59e29.js",
+    "static/media/two_paintings_wall.jpg": "/seaberry-profile/static/media/two_paintings_wall.320238f7ce4f32825558.jpg",
+    "static/media/painting_drafts.jpg": "/seaberry-profile/static/media/painting_drafts.51b93153a153eaf995ff.jpg",
+    "static/media/studio_med.jpg": "/seaberry-profile/static/media/studio_med.e93cc3629237e909af03.jpg",
+    "static/media/disco_ball.jpg": "/seaberry-profile/static/media/disco_ball.ec6eabb7791550598f02.jpg",
+    "static/media/books.jpg": "/seaberry-profile/static/media/books.0aef1ab4f7a2cd387a10.jpg",
+    "static/media/EBGaramond-VariableFont_wght.ttf": "/seaberry-profile/static/media/EBGaramond-VariableFont_wght.baa0e0cf79395becf7d7.ttf",
     "index.html": "/seaberry-profile/index.html",
-    "main.15b7c785.js.map": "/seaberry-profile/static/js/main.15b7c785.js.map"
+    "main.e99b8629.css.map": "/seaberry-profile/static/css/main.e99b8629.css.map",
+    "main.7bc59e29.js.map": "/seaberry-profile/static/js/main.7bc59e29.js.map"
   },
   "entrypoints": [
-    "static/js/main.15b7c785.js"
+    "static/css/main.e99b8629.css",
+    "static/js/main.7bc59e29.js"
   ]
 }
